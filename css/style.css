@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+body{
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.game_text{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: -7%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    font-size: 50px;
+}
+.game_text span{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+.game_text button{
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: salmon;
+    cursor: pointer;
+    font-size: 20px;
+}
+.game_machine{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 15%;
+    padding: 70px 70px 200px;
+    border-radius: 30px;
+    background: #81ecec;
+}
+.plus{
+    position: absolute;
+    bottom: 0;
+}
+.plus span{
+    display:inline-block;
+    background: #000;
+}
+.plus span:nth-child(1){
+    position: absolute;
+    left: 0px;
+    bottom: 80px;
+    width: 90px;
+    height: 30px;
+}
+.plus span:nth-child(2){
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+   
+    width: 30px;
+    height: 90px;
+}
+.circle span{
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.circle span:nth-child(1){
+    right: 60px;
+    bottom: 50px;
+}
+.circle span:nth-child(2){
+   
+    right: 120px;
+    bottom: 100px;
+}
+.screen{
+    background-color: #000;
+}
+.score{
+    line-height: 60px;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.start{
+
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 0.5rem;
+    animation: blink-effect 1s step-end ;
+    animation-iteration-count:3;
+    
+}
+@keyframes blink-effect {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+
+  
+.play_bg > ul {
+    border: 1px solid #999;
+    width: 250px;
+    margin: 0 auto;
+}
+.play_bg > ul > li{
+    width: 100%;
+    height: 25px;
+}
+.play_bg > ul > li > ul{
+    display: flex;
+}
+.play_bg > ul > li > ul >li{
+    width: 25px;
+    height: 25px;
+    outline: 0.5px solid #999;
+}
+.square{
+    background: #2c82c9;
+}
+.square::before{
+    border: 2px solid lightskyblue;
+}
+.bar{
+    background: salmon;
+}
+.bar::before{
+    border: 2px solid rgb(253, 200, 194);
+}
+.tree{
+    background: #67c23a;
+}
+.tree::before{
+    border: 2px solid #bdeba2;
+}
+.zee{
+    background: #e6a23c;
+}
+.zee::before{
+    border: 2px solid #feddaf;
+}
+.elLeft{
+    background: #8e44ad;
+}
+.elLeft::before{
+    border: 2px solid #daa1f2;
+}
+.elRight{
+    background: #16a085;
+}
+.elRight::before{
+    border: 2px solid #88e9d6;
+}
+.square,
+.bar,
+.tree,
+.zee,
+.elLeft,
+.elRight{
+    position: relative;
+}
+.square::before,
+.bar::before,
+.tree::before,
+.zee::before,
+.elLeft::before,
+.elRight::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    transform: translate(-50%,-50%);
+}
